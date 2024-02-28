@@ -1,6 +1,10 @@
 <template>
   <div class="main">
-    <h2>⚕️ Заполните пожалуйста анкету ⚕️</h2>
+    <h2>
+      <img src="https://1409hospital.ru/assets/images/mbr-4.png" alt="" />
+      Заполните пожалуйста анкету
+      <img src="https://1409hospital.ru/assets/images/mbr-4.png" alt="" />
+    </h2>
     <h4>
       Поля помеченные <span>*</span> являются обязательными для заполнения
     </h4>
@@ -265,6 +269,10 @@ export default {
     text-align: center
     font-size: 3rem
     border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+    img
+      transform: translateY(.5rem)
+      width: 3rem
+
   h3
     padding-bottom: .5rem
   h4
