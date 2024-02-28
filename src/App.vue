@@ -19,7 +19,7 @@
             v-model="state.surname"
             placeholder="Иванов"
           />
-          <p v-if="v$.surname.$error"><span>Фамилия обязательна</span></p>
+          <p v-if="v$.surname.$error">Фамилия обязательна</p>
         </div>
         <div class="inputDiv">
           <label for="name">Имя<span>*</span></label>
@@ -29,7 +29,7 @@
             v-model="state.name"
             placeholder="Иван"
           />
-          <p v-if="v$.name.$error"><span>Имя обязательно</span></p>
+          <p v-if="v$.name.$error">Имя обязательно</p>
         </div>
         <div class="inputDiv">
           <label for="patronymic">Отчество</label>
@@ -43,9 +43,7 @@
         <div class="inputDiv">
           <label for="birthDate">Дата рождения<span>*</span></label>
           <input type="date" id="birthDate" v-model="state.birthDate" />
-          <p v-if="v$.birthDate.$error">
-            <span>Дата рождения обязательна</span>
-          </p>
+          <p v-if="v$.birthDate.$error">Дата рождения обязательна</p>
         </div>
         <div class="inputDiv">
           <label for="phone">Номер телефона<span>*</span></label>
@@ -58,9 +56,7 @@
             title="Номер телефона должен начинаться с 7 и содержать 11 цифр"
             placeholder="79377567700"
           />
-          <p v-if="v$.phone.$error">
-            <span>Номер телефона обязателен</span>
-          </p>
+          <p v-if="v$.phone.$error">Номер телефона обязателен</p>
         </div>
         <div class="inputDiv">
           <label for="gender">Пол</label>
@@ -77,9 +73,7 @@
             <option value="Problematic">Проблемные</option>
             <option value="OMS">ОМС</option>
           </select>
-          <p v-if="v$.clientGroup.$error">
-            <span>Группа клиентов обязательна</span>
-          </p>
+          <p v-if="v$.clientGroup.$error">Группа клиентов обязательна</p>
         </div>
         <div class="inputDiv">
           <label for="doctor">Лечащий врач</label>
@@ -117,7 +111,7 @@
         <div class="inputDiv">
           <label for="city">Город<span>*</span></label>
           <input id="city" v-model="state.city" placeholder="Город" />
-          <p v-if="v$.city.$error"><span>Указывать город обязательно</span></p>
+          <p v-if="v$.city.$error">Указывать город обязательно</p>
         </div>
         <div class="inputDiv">
           <label for="street">Улица</label>
@@ -139,7 +133,7 @@
             <option value="BirthCertificate">Свидетельство о рождении</option>
             <option value="WaterCertificate">Вод. удостоверение</option>
           </select>
-          <p v-if="v$.docType.$error"><span>Тип документа обязателен</span></p>
+          <p v-if="v$.docType.$error">Тип документа обязателен</p>
         </div>
         <div class="inputDiv">
           <label for="docSeries">Серия</label>
@@ -168,9 +162,7 @@
           />
           <label for="docIssueDate">Дата выдачи<span>*</span></label>
           <input id="docIssueDate" v-model="state.docIssueDate" type="date" />
-          <p v-if="v$.docIssueDate.$error">
-            <span>Дата выдачи обязательна</span>
-          </p>
+          <p v-if="v$.docIssueDate.$error">Дата выдачи обязательна</p>
         </div>
       </div>
       <div class="btnDiv notes">
@@ -323,7 +315,9 @@ export default {
     height: 2rem
     font-size: 1.5rem
   p
-    background-color: rgba(0, 0, 0, 0.8)
+    color: DarkBlue
+    background-color: #8EC5FC
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)
     border-radius: 0 0 1rem 1rem
     text-align: center
 
