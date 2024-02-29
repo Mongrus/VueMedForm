@@ -1,4 +1,3 @@
-\
 <template>
   <div class="main">
     <h2>
@@ -161,6 +160,8 @@
             v-model="state.docIssuedBy"
             placeholder="Кем выдан"
           />
+        </div>
+        <div class="inputDiv">
           <label for="docIssueDate">Дата выдачи<span>*</span></label>
           <input id="docIssueDate" v-model="state.docIssueDate" type="date" />
           <p v-if="v$.docIssueDate.$error">Дата выдачи обязательна</p>
@@ -288,7 +289,7 @@ export default {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3)
     text-decoration: underline
     @include respond(phone)
-      font-size: 3rem
+      font-size: 2.7rem
   span
     color: Crimson
   button
@@ -336,7 +337,7 @@ export default {
   flex-direction: column
   margin-bottom: 1rem
   @include respond(phone)
-    margin-bottom: 1.5rem
+    margin-bottom: 2rem
   label
     font-size: 1.6rem
     padding-bottom: .1rem
@@ -365,7 +366,7 @@ export default {
     border-radius: 0 0 1rem 1rem
     text-align: center
     @include respond(phone)
-      font-size: 2.1rem
+      font-size: 3rem
 
 .clientGroup
   select
@@ -375,7 +376,7 @@ export default {
     font-size: 1.5rem
     padding-top: .3rem
     @include respond(phone)
-      height: 10rem
+      height: 4rem
       font-size: 2.5rem
 
 .sms
