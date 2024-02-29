@@ -281,7 +281,7 @@ export default {
   h3
     padding-bottom: .5rem
     @include respond(phone)
-      font-size: 3rem
+      font-size: 4rem
       padding-bottom: 2rem
   h4
     padding: 1rem 3.5rem
@@ -289,7 +289,7 @@ export default {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3)
     text-decoration: underline
     @include respond(phone)
-      font-size: 2.7rem
+      font-size: 3rem
   span
     color: Crimson
   button
@@ -342,7 +342,7 @@ export default {
     font-size: 1.6rem
     padding-bottom: .1rem
     @include respond(phone)
-      font-size: 2.7rem
+      font-size: 3.3rem
   input
     width: 30rem
     height: 2rem
@@ -350,7 +350,7 @@ export default {
     @include respond(phone)
       width: 70rem
       height: 4rem
-      font-size: 2.5rem
+      font-size: 3rem
   select
     width: 100%
     height: 2rem
@@ -358,7 +358,7 @@ export default {
     @include respond(phone)
       width: 70rem
       height: 4rem
-      font-size: 2.5rem
+      font-size: 3rem
   p
     color: DarkBlue
     background-color: #8EC5FC
