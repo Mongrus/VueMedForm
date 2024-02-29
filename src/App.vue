@@ -1,3 +1,4 @@
+\
 <template>
   <div class="main">
     <h2>
@@ -270,7 +271,7 @@ export default {
     font-size: 3rem
     border-bottom: 1px solid rgba(255, 255, 255, 0.3)
     @include respond(phone)
-      font-size: 4.5rem
+      font-size: 4rem
     img
       transform: translateY(.5rem)
       width: 3rem
@@ -287,7 +288,7 @@ export default {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3)
     text-decoration: underline
     @include respond(phone)
-      font-size: 2.3rem
+      font-size: 3rem
   span
     color: Crimson
   button
@@ -340,23 +341,23 @@ export default {
     font-size: 1.6rem
     padding-bottom: .1rem
     @include respond(phone)
-      font-size: 2.2rem
+      font-size: 2.7rem
   input
     width: 30rem
     height: 2rem
     font-size: 1.5rem
     @include respond(phone)
-      width: 50rem
-      height: 3rem
-      font-size: 2rem
+      width: 70rem
+      height: 4rem
+      font-size: 2.5rem
   select
     width: 100%
     height: 2rem
     font-size: 1.5rem
     @include respond(phone)
-      width: 50rem
-      height: 3rem
-      font-size: 2rem
+      width: 70rem
+      height: 4rem
+      font-size: 2.5rem
   p
     color: DarkBlue
     background-color: #8EC5FC
@@ -374,8 +375,8 @@ export default {
     font-size: 1.5rem
     padding-top: .3rem
     @include respond(phone)
-      height: 9rem
-      font-size: 2.2rem
+      height: 10rem
+      font-size: 2.5rem
 
 .sms
   display: flex
