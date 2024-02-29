@@ -242,30 +242,10 @@ export default {
 <style lang="sass" scoped>
 // Шрифты
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap')
-
-// Миксины
-@mixin respond($breakpoint)
-    @if $breakpoint == phone
-        @media only screen and (max-width: 700px)
-            @content
-
-    @if $breakpoint == tab-port
-        @media only screen and (max-width: 900px)
-            @content
-
-    @if $breakpoint == tab-land
-        @media only screen and (max-width: 1070px)
-            @content
-
-    @if $breakpoint == tab-pc
-        @media only screen and (max-width: 1220px)
-            @content
-
-    @if $breakpoint == big-screen
-        @media only screen and (min-width: 1800px)
-            @content
+@import './assets/main.sass'
 
 .main
+  position: relative
   margin: 5rem 0
   background: rgba(255, 255, 255, 0.2)
   border-radius: 1.5rem
@@ -289,17 +269,25 @@ export default {
     text-align: center
     font-size: 3rem
     border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+    @include respond(phone)
+      font-size: 4.5rem
     img
       transform: translateY(.5rem)
       width: 3rem
-
+      @include respond(phone)
+        font-size: 6rem
   h3
     padding-bottom: .5rem
+    @include respond(phone)
+      font-size: 3rem
+      padding-bottom: 2rem
   h4
     padding: 1rem 3.5rem
     font-size: 1.6rem
     border-bottom: 1px solid rgba(255, 255, 255, 0.3)
     text-decoration: underline
+    @include respond(phone)
+      font-size: 2.3rem
   span
     color: Crimson
   button
@@ -321,7 +309,22 @@ export default {
     &:active
       transform: translate(7rem, 3.7rem)
       transition: .1s
-
+    @include respond(phone)
+      position: absolute
+      font-size: 4rem
+      width: 30rem
+      height: 9rem
+      left: 17rem
+      bottom: 10rem
+      &:hover
+        transform: translate(0 0)
+        box-shadow: 1rem .7rem .1rem black
+        transition: .3s
+      &:not(nover)
+        transition: .3s
+      &:active
+        transform: translate(0 0)
+        transition: .1s
 .block
  display: flex
  flex-direction: column
@@ -331,23 +334,37 @@ export default {
   display: flex
   flex-direction: column
   margin-bottom: 1rem
+  @include respond(phone)
+    margin-bottom: 1.5rem
   label
     font-size: 1.6rem
     padding-bottom: .1rem
+    @include respond(phone)
+      font-size: 2.2rem
   input
     width: 30rem
     height: 2rem
     font-size: 1.5rem
+    @include respond(phone)
+      width: 50rem
+      height: 3rem
+      font-size: 2rem
   select
     width: 100%
     height: 2rem
     font-size: 1.5rem
+    @include respond(phone)
+      width: 50rem
+      height: 3rem
+      font-size: 2rem
   p
     color: DarkBlue
     background-color: #8EC5FC
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)
     border-radius: 0 0 1rem 1rem
     text-align: center
+    @include respond(phone)
+      font-size: 2.1rem
 
 .clientGroup
   select
@@ -356,6 +373,9 @@ export default {
     text-align: center
     font-size: 1.5rem
     padding-top: .3rem
+    @include respond(phone)
+      height: 9rem
+      font-size: 2.2rem
 
 .sms
   display: flex
@@ -363,6 +383,8 @@ export default {
   input
     width: 1.7rem
     margin: .3rem 0 1rem 0
+    @include respond(phone)
+      width: 3rem
 
 
 .btnDiv
@@ -375,11 +397,17 @@ export default {
     font-family: "Bad Script", cursive
     color: DarkBlue
     font-size: 2rem
+    @include respond(phone)
+      font-size: 3.2rem
 
 .notes
   background: center url('https://aigis.club/uploads/posts/2022-01/1642155415_51-adonius-club-p-fon-dlya-zametok-53.png')
   background-repeat: no-repeat
   background-size: 100%
+  @include respond(phone)
+    width: 50rem
+    height: 50rem
+    margin: 5rem 0 15rem 0
   h2
     font-size: 4rem
     transform: rotate(40deg)
@@ -387,4 +415,6 @@ export default {
     border: .3rem solid DarkBlue
     padding: 1rem
     position: absolute
+    @include respond(phone)
+      font-size: 7rem
 </style>

@@ -2,6 +2,28 @@
   margin: 0
   padding: 0
 
+// Миксины
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 700px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 900px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1070px)
+            @content
+
+    @if $breakpoint == tab-pc
+        @media only screen and (max-width: 1220px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content
+
 body 
   background: center no-repeat fixed url('https://static.tildacdn.com/tild3136-6263-4336-b835-326564363331/FondoSlider.png')
   background-size: 110%
@@ -10,7 +32,9 @@ body
   display: flex
   justify-content: center
   align-items: center
-
+  @include respond(phone)
+    background-size: 200%
+    background-position: -15rem 0
 
 html 
   font-size: 62.5%
@@ -22,10 +46,10 @@ html
     font-size: 40%
 @media only screen and (max-width: 700px) 
   html 
-    font-size: 30%
+    font-size: 35%
 @media only screen and (max-width: 576px) 
   html 
-    font-size: 25%
+    font-size: 30%
 @media only screen and (min-width: 1800px) 
   html 
     font-size: 75%
