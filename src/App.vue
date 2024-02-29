@@ -240,7 +240,31 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+// Шрифты
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap')
+
+// Миксины
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 700px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 900px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1070px)
+            @content
+
+    @if $breakpoint == tab-pc
+        @media only screen and (max-width: 1220px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content
+
 .main
   margin: 5rem 0
   background: rgba(255, 255, 255, 0.2)
@@ -256,6 +280,10 @@ export default {
     display: flex
     flex-wrap: wrap
     justify-content: space-around
+    @include respond(phone)
+      flex-wrap: nowrap
+      flex-direction: column
+      align-items: center
   h2
     padding-bottom: 1.8rem
     text-align: center
