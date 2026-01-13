@@ -403,7 +403,7 @@ export default {
       font-size: 3.2rem
 
 .notes
-  background: center url('https://static.tildacdn.com/tild3533-6363-4761-b035-643731393439/pngwingcom_-_2023-06.png')
+  background: center url('https://s3.amazonaws.com/media-p.slid.es/uploads/871025/images/7952603/pasted-from-clipboard.png')
   background-repeat: no-repeat
   background-size: 100%
   @include respond(phone)
