@@ -403,7 +403,7 @@ export default {
       font-size: 3.2rem
 
 .notes
-  background: center url('https://aigis.club/uploads/posts/2022-01/1642155415_51-adonius-club-p-fon-dlya-zametok-53.png')
+  background: center url('https://s3.amazonaws.com/media-p.slid.es/uploads/871025/images/7952603/pasted-from-clipboard.png')
   background-repeat: no-repeat
   background-size: 100%
   @include respond(phone)
